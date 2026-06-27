@@ -4,6 +4,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/adminDashboard.css" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<link rel="stylesheet" href="../assets/css/patientDashboard.css" />
+
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/logo.png" />
     <title>PatientDashboard</title>
     <link rel="stylesheet" href="../assets/css/adminDashboard.css">
@@ -21,6 +25,19 @@
         <div class="wrapper">
             <div id="header"></div>
             <main class="main-content">
+                <input type="text" id="searchBar" class="searchBar" placeholder="Search Bar for custom output" />
+<div class="filter-wrapper">
+  <select class="filter-select" id="filterTime">...</select>
+  <select class="filter-select" id="filterSpecialty">...</select>
+</div>
+<div id="content"></div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
                 <input type="text" id="searchBar" class="searchBar" placeholder="Search Bar for custom output" />
                 <div class="filter-wrapper">
                     <select class="filter-select" id="filterTime">
@@ -58,6 +75,14 @@
         </div>
     </div>
     <script type="module" src="../js/patientDashboard.js" defer></script>
+    <script src="../js/render.js" defer></script>
+<script src="../js/util.js" defer></script>
+<script src="../js/components/header.js" defer></script>
+<script src="../js/components/footer.js" defer></script>
+<script type="module" src="../js/components/modals.js"></script>
+<script type="module" src="../js/patientDashboard.js" defer></script>
+
+<div id="footer"></div>
 </body>
 
 </html>
